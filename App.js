@@ -77,7 +77,7 @@ export default class App extends React.Component {
 <ScrollView>
   <View style={styles.services}>
     <Header2 title={'SERVICES'} images={require("./src/assets/fack.png")} content={'5 services'} buttonText={'VIEW  DETAILS'}/>
-    <Header2 title={'MONEY'} content={'....'} buttonText={'SHOW BALANCE'}/>
+    <Header2 title={'MONEY'} content={'in your wallet'} buttonText={'SHOW BALANCE'}/>
     </View>
     <Header3/>
     <Header4/>

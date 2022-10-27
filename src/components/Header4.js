@@ -7,7 +7,7 @@ export default class Header3 extends Component {
         <ScrollView horizontal={true}>
         <View style={StyleSheet.mainView}>
 
-<TouchableOpacity style={styles.airtel}>
+<TouchableOpacity style={styles.airtel} onPress={() => alert('clicked button')}>
 <Image source={require('../assets/airtel.png')} style={styles.sortImg} />
 <Image source={require('../assets/airtel.png')} style={styles.sortImg} />
 <Image source={require('../assets/airtel.png')} style={styles.sortImg} />

@@ -15,7 +15,7 @@ class Header2 extends Component {
           </View>
           <Text style={styles.serviceText}>{this.props.content}</Text>
           <View style={styles.buttonView}>
-            <TouchableOpacity style={styles.redButton}>
+            <TouchableOpacity style={styles.redButton} onPress={() => alert('clicked button')}>
               <Text style={styles.redButtonText}>{this.props.buttonText}</Text>
             </TouchableOpacity>
           </View>
@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
   serviceText: {
     fontSize: 18,
     margin: 20,
+    color:'black',
 
     fontWeight: 'bold',
   },
