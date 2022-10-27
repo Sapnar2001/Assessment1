@@ -32,13 +32,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   serviceView: {
-    height: 230,
+    height: 200,
     width: 180,
     borderWidth: 1,
     borderColor: 'white',
     backgroundColor: 'white',
     borderRadius: 20,
-    margin: 10,
+    margin: 5,
   },
   serviceText: {
     fontSize: 18,
@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     width: '100%',
     borderRadius: 10,
+    marginTop:50,
   },
   redButtonText: {
     fontSize: 15,
