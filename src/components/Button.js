@@ -1,27 +1,24 @@
 
-import React, {Component} from 'react';
-import {View, Text, TouchableOpacity, StyleSheet, Image} from 'react-native';
-import Button from './Button';
-class Header2 extends Component {
-  render() {
-    return (
-        <View style={styles.serviceView}>
-          <View style={styles.a}>
-            <Text style={styles.heading}>{this.props.title}</Text>
-            <Image
-              source={this.props.images}
-              style={styles.backImg}
-            />
-          </View>
-          <Text style={styles.serviceText}>{this.props.content}</Text>
-          <Button text={this.props.buttonText}/>
-        </View>
 
-    );
-  }
+
+import React, { Component } from "react";
+import { View, Text, TouchableOpacity,  StyleSheet, Image, FlatList } from "react-native";
+
+
+class Button extends Component{
+
+        render(){
+
+            return(
+                <View style={styles.buttonView}>
+            <TouchableOpacity style={styles.redButton} onPress={() => alert('clicked button')}>
+              <Text style={styles.redButtonText}>{this.props.text}</Text>
+            </TouchableOpacity>
+          </View>
+            )
+        }
 }
 
-export default Header2;
 const styles = StyleSheet.create({
   main: {
     justifyContent: 'space-evenly',
@@ -74,3 +71,4 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+export default Button

@@ -146,16 +146,16 @@ const styles = StyleSheet.create({
         borderWidth: 1,
       borderRadius: 25,
       borderColor: 'white',
-      height: 48,
-      width: 48,
+      // height: 48,
+      // width: 48,
       overflow: 'hidden',
       justifyContent: 'center',
       alignItems: 'center',
     },
     rechargeImg: {
-      height: '100%',
-
-      width: '100%',
+      height: 30,
+      width: 30,
+      margin: 15
     },
     redButton: {
       backgroundColor: 'red',

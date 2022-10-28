@@ -7,12 +7,18 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
-  FlatList
+  FlatList,
 } from 'react-native';
 import Header from './src/components/Header';
 import Header2 from './src/components/Header2';
 import Header3 from './src/components/Header3';
 import Header4 from './src/components/Header4';
+import CardsRail from './src/components/CardsRail';
+
+const data = [
+  {title: 'SERVICES', content: '5 Services',buttonText:'View Details'},
+  {title: 'MONEY', content: 'In your wallet', buttonText:'Show Balance'},
+];
 // import Header5 from './src/components/Header5';
 // import Product  from './src/components/Product';
 
@@ -52,15 +58,14 @@ import Header4 from './src/components/Header4';
 
 // ];
 
-
-
 export default class App extends React.Component {
   render() {
     return (
       <SafeAreaView style={{backgroundColor: 'rgb(239,241,253)', flex: 1}}>
         <View style={styles.top}>
           <TouchableOpacity style={styles.mainImg}>
-            <Image  resizeMode="contain"
+            <Image
+              resizeMode="contain"
               source={require('./src/assets/user.png')}
               style={styles.userImg}
             />
@@ -68,102 +73,101 @@ export default class App extends React.Component {
           <Text style={styles.text1}> manage </Text>
           <TouchableOpacity style={styles.mainImg}>
             <Image
-            resizeMode="contain"
+              resizeMode="contain"
               source={require('./src/assets/bell.png')}
               style={styles.bellImg}
             />
           </TouchableOpacity>
         </View>
-<ScrollView>
-  <View style={styles.services}>
-    <Header2 title={'SERVICES'} images={require("./src/assets/fack.png")} content={'5 services'} buttonText={'VIEW  DETAILS'}/>
-    <Header2 title={'MONEY'} content={'in your wallet'} buttonText={'SHOW BALANCE'}/>
-    </View>
-    <Header3/>
-    <Header4/>
-    {/* <View style={styles.boxes}>
+        <ScrollView>
+          <View style={styles.services}>
+            <CardsRail data={data} />
+          </View>
+          <Header3 />
+          <Header4 />
+          {/* <View style={styles.boxes}>
     <Header5/>
     <Header5/>
     <Header5/>
     </View> */}
-       <Header/>
+          <Header />
 
-        <View style={styles.shortcutBox}>
-          <Text style={styles.shortcut}>BUY NEW SERVICE</Text>
-          <View style={styles.shortcutView}>
-            <TouchableOpacity style={styles.shortcutBtn}>
-              <Image
-                source={require('./src/assets/band.png')}
-                style={styles.rechargeImg}
-              />
-              <Text>broadband</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.shortcutBtn}>
-              <Image
-                source={require('./src/assets/bill.jpeg')}
-                style={styles.rechargeImg}
-              />
-              <Text> prepaid</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.shortcutBtn}>
-              <Image
-                source={require('./src/assets/roam.png')}
-                style={styles.rechargeImg}
-              />
-              <Text> postpaid</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.shortcutBtn}>
-              <Image
-                source={require('./src/assets/add.webp')}
-                style={styles.rechargeImg}
-              />
-              <Text>airtel</Text>
-            </TouchableOpacity>
+          <View style={styles.shortcutBox}>
+            <Text style={styles.shortcut}>BUY NEW SERVICE</Text>
+            <View style={styles.shortcutView}>
+              <TouchableOpacity style={styles.shortcutBtn}>
+                <Image
+                  source={require('./src/assets/band.png')}
+                  style={styles.rechargeImg}
+                />
+                <Text>broadband</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.shortcutBtn}>
+                <Image
+                  source={require('./src/assets/bill.jpeg')}
+                  style={styles.rechargeImg}
+                />
+                <Text> prepaid</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.shortcutBtn}>
+                <Image
+                  source={require('./src/assets/roam.png')}
+                  style={styles.rechargeImg}
+                />
+                <Text> postpaid</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.shortcutBtn}>
+                <Image
+                  source={require('./src/assets/add.webp')}
+                  style={styles.rechargeImg}
+                />
+                <Text>airtel</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.buttonView}>
+              <TouchableOpacity style={styles.redButton}>
+                <Text style={styles.redButtonText}>
+                  Free Home Delivery of SIM
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.shortcutView}>
+              <TouchableOpacity style={styles.shortcutBtn}>
+                <Image
+                  source={require('./src/assets/dth.png')}
+                  style={styles.rechargeImg}
+                />
+                <Text>recharge</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.shortcutBtn}>
+                <Image
+                  source={require('./src/assets/roam.png')}
+                  style={styles.rechargeImg}
+                />
+                <Text>bills</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.shortcutBtn}>
+                <Image
+                  source={require('./src/assets/roam.png')}
+                  style={styles.rechargeImg}
+                />
+                <Text> benefits</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.shortcutBtn}>
+                <Image
+                  source={require('./src/assets/add.webp')}
+                  style={styles.rechargeImg}
+                />
+                <Text>add </Text>
+              </TouchableOpacity>
+            </View>
           </View>
-          <View style={styles.buttonView}>
-            <TouchableOpacity style={styles.redButton}>
-              <Text style={styles.redButtonText}>
-                Free Home Delivery of SIM
-              </Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.shortcutView}>
-            <TouchableOpacity style={styles.shortcutBtn}>
-              <Image
-                source={require('./src/assets/dth.png')}
-                style={styles.rechargeImg}
-              />
-              <Text>recharge</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.shortcutBtn}>
-              <Image
-                source={require('./src/assets/roam.png')}
-                style={styles.rechargeImg}
-              />
-              <Text>bills</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.shortcutBtn}>
-              <Image
-                source={require('./src/assets/roam.png')}
-                style={styles.rechargeImg}
-              />
-              <Text> benefits</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.shortcutBtn}>
-              <Image
-                source={require('./src/assets/add.webp')}
-                style={styles.rechargeImg}
-              />
-              <Text>add </Text>
-            </TouchableOpacity>
-          </View>
-        </View> 
         </ScrollView>
       </SafeAreaView>
-// {/* <View>
-// <FlatList  data={ImagesArray}
-// renderItem={({item})=>(<Product product={item}/>)}></FlatList>
-// </View> */}
+      // {/* <View>
+      // <FlatList  data={ImagesArray}
+      // renderItem={({item})=>(<Product product={item}/>)}></FlatList>
+      // </View> */}
     );
   }
 }
@@ -182,7 +186,7 @@ const styles = StyleSheet.create({
   },
   text1: {
     fontWeight: 'bold',
-    fontSize:15,
+    fontSize: 15,
   },
   bellImg: {
     height: 30,
@@ -221,7 +225,7 @@ const styles = StyleSheet.create({
   redButton: {
     backgroundColor: 'red',
     width: '100%',
-    borderRadius:10,
+    borderRadius: 10,
   },
   redButtonText: {
     fontSize: 15,
@@ -231,23 +235,22 @@ const styles = StyleSheet.create({
   },
   buttonView: {
     // alignSelf:'center'
-    marginHorizontal:15,
-
+    marginHorizontal: 15,
   },
-  services:{
+  services: {
     justifyContent: 'space-evenly',
     flexDirection: 'row',
   },
-  mainImg:{
+  mainImg: {
     height: 48,
     width: 48,
     overflow: 'hidden',
     justifyContent: 'center',
     alignItems: 'center',
   },
-  boxes:{
+  boxes: {
     justifyContent: 'space-between',
-    flexDirection: 'row', 
-    margin:10,
-  }
+    flexDirection: 'row',
+    margin: 10,
+  },
 });

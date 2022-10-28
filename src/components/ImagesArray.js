@@ -1,6 +1,6 @@
 const ImagesArray=[
     {
-        imageUri:require("../assets/recharge.png"),
+        imageUri:require("../assets/download.png"),
         title:"recharge",
     },
     {
